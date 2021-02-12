@@ -1,12 +1,21 @@
 import "./App.css";
 import requests from "./requests";
 import Row from "./Row";
-
+import Banner from "./Banner";
+import Nav from "./Nav";
+// import YouTube from "react-youtube";
 function App() {
   return (
     <div className="App">
       {/* <h1>Netflix Clone</h1> */}
-      <Row title="NETFLIX ORIGNALS" fetchUrl={requests.fetchNetflixOriginals} />
+      <Nav />
+      <Banner />
+      {/* <YouTube /> */}
+      <Row
+        title="NETFLIX ORIGNALS"
+        isLargeRow
+        fetchUrl={requests.fetchNetflixOriginals}
+      />
       <Row title="Trending Now" fetchUrl={requests.fetchTrending} />
       <Row title="TopRatedMovies" fetchUrl={requests.fetchTopRatedMovies} />
       <Row title="ActionMovies" fetchUrl={requests.ActionMoviesfetch} />
